@@ -1,68 +1,70 @@
-# Web Scraping do X (Twitter) com Python
+# X (Twitter) Web Scraping with Python
 
-## Descrição do Projeto
+## Project Description
 
-Este projeto foi desenvolvido como atividade da disciplina para realizar **coleta de dados (Web Scraping)** de publicações do X (Twitter) utilizando Python.
+This project was developed as part of a course activity to perform **data collection (Web Scraping)** from posts on X (Twitter) using Python.
 
-O script acessa automaticamente um perfil, coleta informações das publicações e salva esses dados em um **arquivo CSV estruturado**, que pode ser aberto no Excel ou utilizado para análise de dados.
+The script automatically accesses a user profile, collects information from the posts, and saves the data into a **structured CSV file**, which can be opened in Excel or used for data analysis.
 
-Perfil utilizado para coleta:
+Profile used for data collection:
 https://x.com/TechDrop_News
 
-## Tecnologias Utilizadas
+## Technologies Used
 
 * Python
-* Playwright (automação de navegador)
-* Pandas (organização e exportação de dados)
-* Asyncio (execução assíncrona)
+* Playwright (browser automation)
+* Pandas (data organization and export)
+* Asyncio (asynchronous execution)
 
-## Informações Coletadas
+## Collected Information
 
-O script coleta as seguintes informações de cada postagem:
+The script extracts the following information from each post:
 
-* Autor do post
-* Texto da publicação
-* Data da postagem
-* URL do post
-* Número de curtidas
-* Número de reposts
-* Número de respostas
-* Número de visualizações
-* Tipo de mídia (imagem, vídeo ou nenhuma)
+* Post author
+* Post text (description)
+* Post date
+* Post URL
+* Number of likes
+* Number of reposts
+* Number of replies
+* Number of views
+* Media type (image, video, or none)
 
-Esses dados são armazenados e depois exportados para um arquivo `.csv`.
+These data are stored and then exported to a `.csv` file.
 
-## Funcionamento do Script
+## How the Script Works
 
-O programa:
+The program:
 
-1. Abre automaticamente um navegador usando Playwright
-2. Acessa o perfil configurado no código
-3. Rola a página para carregar mais posts
-4. Localiza os elementos HTML das publicações
-5. Extrai as informações de cada postagem
-6. Armazena os dados em uma lista
-7. Converte os dados para um DataFrame com Pandas
-8. Salva os dados em um arquivo CSV
+1. Automatically opens a browser using Playwright
+2. Accesses the profile defined in the code
+3. Scrolls the page to load more posts
+4. Locates the HTML elements of the posts
+5. Extracts the information from each post
+6. Stores the collected data in a list
+7. Converts the data into a Pandas DataFrame
+8. Saves the data into a CSV file
 
-Antes de salvar, o script também remove **posts duplicados**.
+Before saving, the script also removes **duplicate posts**.
 
-## Arquivo Gerado
+## Generated File
 
-Após a execução do script é criada a pasta:
+After running the script, a folder called:
 
 `saidas_scrapings`
 
-Dentro dela é gerado o arquivo:
+is created.
 
-`relatorio_techdrop.csv`
+Inside this folder the file is generated:
 
-## Observação
+`relatorio_techdrop_limpo.csv`
 
-A quantidade de posts coletados pode ser alterada modificando a variável:
+## Note
+
+The number of collected posts can be changed by modifying the variable:
 
 `QUANTIDADE_SCROLLS`
 
-## Autor
+## Author
 
-Projeto desenvolvido por estudante de **Ciência da Computação** como atividade prática de Web Scraping com Python.
+Project developed by a **Computer Science student** as a practical activity on Web Scraping using Python.
